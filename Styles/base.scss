@@ -1,0 +1,81 @@
+// Reset og border-box á allt
+* {
+    margin: 0;
+    padding: 0;
+  }
+  
+  html {
+    box-sizing: border-box;
+  }
+  
+  *,
+  *:before,
+  *:after {
+    box-sizing: inherit;
+  }
+  
+  // Almennt
+  html,
+  input,
+  select,
+  button {
+    font-size: $font-base-body-px;
+    font-family: $font-family-base;
+  }
+  
+  h1,
+  h2,
+  h3 {
+    margin-bottom: $spacing;
+    font-family: $font-family-heading;
+  }
+  
+  a {
+    color: inherit;
+    background-color: inherit;
+  }
+  
+  img {
+    max-width: 100%;
+  }
+  
+  /** Hjálpar class sem felur sjónrænt en skjálesarar lesa **/
+  .sr-only:not(:focus):not(:active) {
+    clip: rect(0 0 0 0);
+    clip-path: inset(50%);
+    height: 1px;
+    overflow: hidden;
+    position: absolute;
+    white-space: nowrap;
+    width: 1px;
+  }
+  
+  // Takki
+  .button {
+    display: inline-block;
+    border: 1px solid $color-dark;
+    border-radius: $border-radius;
+    padding: calc($spacing / 2) calc($spacing);
+    font-family: $font-family-base;
+    text-decoration: none;
+    text-align: center;
+    color: $color-light;
+    background-color: $color-dark;
+    transition: background-color $transition-time-short $transition-timing-function, color $transition-time-short;
+  }
+  
+  .button:hover {
+    color: $color-dark;
+    background-color: $color-gold;
+  }
+  
+  // Fade in animation
+  @keyframes fade-in {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+  
